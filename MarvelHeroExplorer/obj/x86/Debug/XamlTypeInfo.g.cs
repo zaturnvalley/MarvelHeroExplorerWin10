@@ -132,15 +132,41 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "MarvelHeroExplorer.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.Character>";
+            _typeNameTable[4] = "System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.Character>";
+            _typeNameTable[5] = "Object";
+            _typeNameTable[6] = "MarvelHeroExplorer.Models.Character";
+            _typeNameTable[7] = "Int32";
+            _typeNameTable[8] = "String";
+            _typeNameTable[9] = "MarvelHeroExplorer.Models.Thumbnail";
+            _typeNameTable[10] = "MarvelHeroExplorer.Models.Comics";
+            _typeNameTable[11] = "MarvelHeroExplorer.Models.SeriesList";
+            _typeNameTable[12] = "MarvelHeroExplorer.Models.Stories";
+            _typeNameTable[13] = "MarvelHeroExplorer.Models.Events";
+            _typeNameTable[14] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Url>";
+            _typeNameTable[15] = "MarvelHeroExplorer.Models.Url";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::MarvelHeroExplorer.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.Character>);
+            _typeTable[4] = typeof(global::System.Collections.ObjectModel.Collection<global::MarvelHeroExplorer.Models.Character>);
+            _typeTable[5] = typeof(global::System.Object);
+            _typeTable[6] = typeof(global::MarvelHeroExplorer.Models.Character);
+            _typeTable[7] = typeof(global::System.Int32);
+            _typeTable[8] = typeof(global::System.String);
+            _typeTable[9] = typeof(global::MarvelHeroExplorer.Models.Thumbnail);
+            _typeTable[10] = typeof(global::MarvelHeroExplorer.Models.Comics);
+            _typeTable[11] = typeof(global::MarvelHeroExplorer.Models.SeriesList);
+            _typeTable[12] = typeof(global::MarvelHeroExplorer.Models.Stories);
+            _typeTable[13] = typeof(global::MarvelHeroExplorer.Models.Events);
+            _typeTable[14] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Url>);
+            _typeTable[15] = typeof(global::MarvelHeroExplorer.Models.Url);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -176,6 +202,34 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::MarvelHeroExplorer.MainPage(); }
+        private object Activate_3_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.Character>(); }
+        private object Activate_4_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MarvelHeroExplorer.Models.Character>(); }
+        private object Activate_6_Character() { return new global::MarvelHeroExplorer.Models.Character(); }
+        private object Activate_9_Thumbnail() { return new global::MarvelHeroExplorer.Models.Thumbnail(); }
+        private object Activate_10_Comics() { return new global::MarvelHeroExplorer.Models.Comics(); }
+        private object Activate_11_SeriesList() { return new global::MarvelHeroExplorer.Models.SeriesList(); }
+        private object Activate_12_Stories() { return new global::MarvelHeroExplorer.Models.Stories(); }
+        private object Activate_13_Events() { return new global::MarvelHeroExplorer.Models.Events(); }
+        private object Activate_14_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Url>(); }
+        private object Activate_15_Url() { return new global::MarvelHeroExplorer.Models.Url(); }
+        private void VectorAdd_3_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Character>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Character)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_4_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Character>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Character)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_14_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Url>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Url)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,6 +244,7 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
             case 0:   //  MarvelHeroExplorer.MainPage
                 userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
+                userType.AddMemberName("MarvelCharacters");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -201,16 +256,339 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
+
+            case 3:   //  System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.Character>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.Character>"));
+                userType.CollectionAdd = VectorAdd_3_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.Character>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_Collection;
+                userType.CollectionAdd = VectorAdd_4_Collection;
+                xamlType = userType;
+                break;
+
+            case 5:   //  Object
+                xamlType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  MarvelHeroExplorer.Models.Character
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_6_Character;
+                userType.AddMemberName("id");
+                userType.AddMemberName("name");
+                userType.AddMemberName("description");
+                userType.AddMemberName("modified");
+                userType.AddMemberName("thumbnail");
+                userType.AddMemberName("resourceURI");
+                userType.AddMemberName("comics");
+                userType.AddMemberName("series");
+                userType.AddMemberName("stories");
+                userType.AddMemberName("events");
+                userType.AddMemberName("urls");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Int32
+                xamlType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  String
+                xamlType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  MarvelHeroExplorer.Models.Thumbnail
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  MarvelHeroExplorer.Models.Comics
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  MarvelHeroExplorer.Models.SeriesList
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  MarvelHeroExplorer.Models.Stories
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  MarvelHeroExplorer.Models.Events
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Url>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_14_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 15:   //  MarvelHeroExplorer.Models.Url
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_15_Url;
+                userType.AddMemberName("type");
+                userType.AddMemberName("url");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
 
 
+        private object get_0_MainPage_MarvelCharacters(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.MainPage)instance;
+            return that.MarvelCharacters;
+        }
+        private void set_0_MainPage_MarvelCharacters(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.MainPage)instance;
+            that.MarvelCharacters = (global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.Character>)Value;
+        }
+        private object get_1_Character_id(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.id;
+        }
+        private void set_1_Character_id(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.id = (global::System.Int32)Value;
+        }
+        private object get_2_Character_name(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.name;
+        }
+        private void set_2_Character_name(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.name = (global::System.String)Value;
+        }
+        private object get_3_Character_description(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.description;
+        }
+        private void set_3_Character_description(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.description = (global::System.String)Value;
+        }
+        private object get_4_Character_modified(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.modified;
+        }
+        private void set_4_Character_modified(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.modified = (global::System.String)Value;
+        }
+        private object get_5_Character_thumbnail(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.thumbnail;
+        }
+        private void set_5_Character_thumbnail(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.thumbnail = (global::MarvelHeroExplorer.Models.Thumbnail)Value;
+        }
+        private object get_6_Character_resourceURI(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.resourceURI;
+        }
+        private void set_6_Character_resourceURI(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.resourceURI = (global::System.String)Value;
+        }
+        private object get_7_Character_comics(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.comics;
+        }
+        private void set_7_Character_comics(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.comics = (global::MarvelHeroExplorer.Models.Comics)Value;
+        }
+        private object get_8_Character_series(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.series;
+        }
+        private void set_8_Character_series(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.series = (global::MarvelHeroExplorer.Models.SeriesList)Value;
+        }
+        private object get_9_Character_stories(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.stories;
+        }
+        private void set_9_Character_stories(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.stories = (global::MarvelHeroExplorer.Models.Stories)Value;
+        }
+        private object get_10_Character_events(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.events;
+        }
+        private void set_10_Character_events(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.events = (global::MarvelHeroExplorer.Models.Events)Value;
+        }
+        private object get_11_Character_urls(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            return that.urls;
+        }
+        private void set_11_Character_urls(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Character)instance;
+            that.urls = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Url>)Value;
+        }
+        private object get_12_Url_type(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Url)instance;
+            return that.type;
+        }
+        private void set_12_Url_type(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Url)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_13_Url_url(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Url)instance;
+            return that.url;
+        }
+        private void set_13_Url_url(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Url)instance;
+            that.url = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "MarvelHeroExplorer.MainPage.MarvelCharacters":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.MainPage");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "MarvelCharacters", "System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.Character>");
+                xamlMember.Getter = get_0_MainPage_MarvelCharacters;
+                xamlMember.Setter = set_0_MainPage_MarvelCharacters;
+                break;
+            case "MarvelHeroExplorer.Models.Character.id":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "id", "Int32");
+                xamlMember.Getter = get_1_Character_id;
+                xamlMember.Setter = set_1_Character_id;
+                break;
+            case "MarvelHeroExplorer.Models.Character.name":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "name", "String");
+                xamlMember.Getter = get_2_Character_name;
+                xamlMember.Setter = set_2_Character_name;
+                break;
+            case "MarvelHeroExplorer.Models.Character.description":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "description", "String");
+                xamlMember.Getter = get_3_Character_description;
+                xamlMember.Setter = set_3_Character_description;
+                break;
+            case "MarvelHeroExplorer.Models.Character.modified":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "modified", "String");
+                xamlMember.Getter = get_4_Character_modified;
+                xamlMember.Setter = set_4_Character_modified;
+                break;
+            case "MarvelHeroExplorer.Models.Character.thumbnail":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "thumbnail", "MarvelHeroExplorer.Models.Thumbnail");
+                xamlMember.Getter = get_5_Character_thumbnail;
+                xamlMember.Setter = set_5_Character_thumbnail;
+                break;
+            case "MarvelHeroExplorer.Models.Character.resourceURI":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "resourceURI", "String");
+                xamlMember.Getter = get_6_Character_resourceURI;
+                xamlMember.Setter = set_6_Character_resourceURI;
+                break;
+            case "MarvelHeroExplorer.Models.Character.comics":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "comics", "MarvelHeroExplorer.Models.Comics");
+                xamlMember.Getter = get_7_Character_comics;
+                xamlMember.Setter = set_7_Character_comics;
+                break;
+            case "MarvelHeroExplorer.Models.Character.series":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "series", "MarvelHeroExplorer.Models.SeriesList");
+                xamlMember.Getter = get_8_Character_series;
+                xamlMember.Setter = set_8_Character_series;
+                break;
+            case "MarvelHeroExplorer.Models.Character.stories":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "stories", "MarvelHeroExplorer.Models.Stories");
+                xamlMember.Getter = get_9_Character_stories;
+                xamlMember.Setter = set_9_Character_stories;
+                break;
+            case "MarvelHeroExplorer.Models.Character.events":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "events", "MarvelHeroExplorer.Models.Events");
+                xamlMember.Getter = get_10_Character_events;
+                xamlMember.Setter = set_10_Character_events;
+                break;
+            case "MarvelHeroExplorer.Models.Character.urls":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Character");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "urls", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Url>");
+                xamlMember.Getter = get_11_Character_urls;
+                xamlMember.Setter = set_11_Character_urls;
+                break;
+            case "MarvelHeroExplorer.Models.Url.type":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Url");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_12_Url_type;
+                xamlMember.Setter = set_12_Url_type;
+                break;
+            case "MarvelHeroExplorer.Models.Url.url":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Url");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "url", "String");
+                xamlMember.Getter = get_13_Url_url;
+                xamlMember.Setter = set_13_Url_url;
+                break;
+            }
             return xamlMember;
         }
     }

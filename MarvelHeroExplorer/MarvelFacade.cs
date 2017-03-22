@@ -1,6 +1,7 @@
 ﻿using MarvelHeroExplorer.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -18,17 +19,42 @@ namespace MarvelHeroExplorer
         private const string PrivateKey = "f4e0e571e93efa1dbdfe700b6fea05370b91478f";
         private const string PublicKey = "0df5b92f3c787763281834f9a8049a71";
         private const int MaxCharacters = 1500;
-        public async Task<CharacterDataWrapper> GetCharacterList()
+        private const string ImageNotAvailablePath = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available";
+        public static async Task PopulateMarvelCharactersAsync(ObservableCollection<Character> marvelCharacters)
+        {
+            var characterDataWrapper = await GetCharacterDataWrapperAsync();
+
+            var characters = characterDataWrapper.data.results;
+            foreach (var character in characters)
+            {
+                // Filter characters that missing thumbnail images
+                if (character.thumbnail != null
+                    && character.thumbnail.path != ""
+                    && character.thumbnail.path != ImageNotAvailablePath)
+                {
+                    character.thumbnail.small = String.Format("{0}/standard_small.{1}", 
+                        character.thumbnail.path,
+                        character.thumbnail.extension);
+
+                    character.thumbnail.large = string.Format("{0}/portrait_xlarge.{1}",
+                        character.thumbnail.path,
+                        character.thumbnail.extension);
+
+                    marvelCharacters.Add(character);
+                }
+            }
+        }
+        private static async Task<CharacterDataWrapper> GetCharacterDataWrapperAsync()
         {
             // Assemble the URL
             Random random = new Random();
-            var offset = random.Next(1500);
+            var offset = random.Next(MaxCharacters);
 
             // Get the MD5 Hash
             var timeStamp = DateTime.Now.Ticks.ToString();
             var hash = CreateHash(timeStamp);
 
-            string url = String.Format("https://gateway.marvel.com:443/v1/public/characters?limit=10&offset={0}&apikey={1}apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp);
+            string url = String.Format("https://gateway.marvel.com:443/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
 
             // Call out to Marvel
             HttpClient http = new HttpClient();

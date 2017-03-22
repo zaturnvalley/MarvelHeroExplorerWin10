@@ -5,9 +5,46 @@
     xmlns:local="using:MarvelHeroExplorer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:MarvelHeroExplorer.Models"
+    Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="MasterListView" ItemsSource="{x:Bind MarvelCharacters}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="data:Character">
+                    <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
+                        <Image Source="{x:Bind thumbnail.small}"/>
+                        <TextBlock Text="{x:Bind name}"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0"
+                                   FontSize="18"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Name="DetailGrid" Grid.Column="1" Grid.Row="0">
+            
+        </Grid>
+        <TextBlock Text="Attribution" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2"/>
+        <ProgressRing Name="MyProgressRing"
+                      Width="100"
+                      Height="100"
+                      Foreground="Gray"
+                      Grid.ColumnSpan="2"
+                      Grid.RowSpan="3"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"/>
     </Grid>
 </Page>
