@@ -23,7 +23,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="data:Character">
                     <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
-                        <Image Source="{x:Bind thumbnail.small}"/>
+                        <Ellipse Width="45"
+                                 Height="45">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{x:Bind thumbnail.small}"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
                         <TextBlock Text="{x:Bind name}"
                                    VerticalAlignment="Center"
                                    Margin="10,0,0,0"
@@ -33,11 +38,35 @@
             </ListView.ItemTemplate>
         </ListView>
         <Grid Name="DetailGrid" Grid.Column="1" Grid.Row="0">
-            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Name="DetailImage" Grid.Column="0" Grid.RowSpan="2"/>
+                <TextBlock Name="DetailNameTextBlock" 
+                           FontSize="32" 
+                           Grid.Column="1"/>
+                <TextBlock Name="DetailDescriptionTextBlock" 
+                           Grid.Row="1" 
+                           Grid.Column="1" 
+                           TextWrapping="Wrap"/>
+            </Grid>
         </Grid>
-        <TextBlock Text="Attribution" 
+        <TextBlock Text="Data provided by Marvel. © 2017 MARVEL" 
                    VerticalAlignment="Center" 
-                   HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2"/>
+                   HorizontalAlignment="Center" 
+                   Grid.ColumnSpan="2" 
+                   Grid.Row="2"/>
         <ProgressRing Name="MyProgressRing"
                       Width="100"
                       Height="100"

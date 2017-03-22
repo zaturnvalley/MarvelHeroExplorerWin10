@@ -57,8 +57,13 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Source" />
+    <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="ImageSource" />
     </RootType>
     <RootType FullName="MarvelHeroExplorer.MainPage" />
   </Roots.RootTypes>
