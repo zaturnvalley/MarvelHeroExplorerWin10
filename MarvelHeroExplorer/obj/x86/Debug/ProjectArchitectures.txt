@@ -1,0 +1,1 @@
+c:\users\zach\documents\visual studio 2015\Projects\MarvelHeroExplorer\MarvelHeroExplorer\MarvelHeroExplorer.csproj;x86
