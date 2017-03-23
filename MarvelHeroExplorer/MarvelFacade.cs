@@ -57,16 +57,10 @@ namespace MarvelHeroExplorer
             Random random = new Random();
             var offset = random.Next(MaxCharacters);
 
-            // Get the MD5 Hash
-            var timeStamp = DateTime.Now.Ticks.ToString();
-            var hash = CreateHash(timeStamp);
+            string url = String.Format("https://gateway.marvel.com:443/v1/public/characters?limit=10&offset={0}", 
+                offset);
 
-            string url = String.Format("https://gateway.marvel.com:443/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
-
-            // Call out to Marvel
-            HttpClient http = new HttpClient();
-            var response = await http.GetAsync(url);
-            var jsonMessage = await response.Content.ReadAsStringAsync();
+            var jsonMessage = await CallMarvelAsync(url);
 
             // Response -> string / json -> deserialize
             var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
@@ -74,6 +68,37 @@ namespace MarvelHeroExplorer
 
             var result = (CharacterDataWrapper)serializer.ReadObject(ms);
             return result;
+        }
+        private static async Task<CharacterDataWrapper> GetComicDataWrapperAsync(int characterId)
+        {
+            var url = String.Format("http://gateway.marvel.com:80/v1/public/comics?characters={0}&limit=10", 
+                characterId);
+
+            var jsonMessage = await CallMarvelAsync(url);
+
+            // Response -> string / json -> deserialize
+            var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
+
+            var result = (CharacterDataWrapper)serializer.ReadObject(ms);
+            return result;
+        }
+        private async static Task<string> CallMarvelAsync(string url)
+        {
+            // Assemble the URL
+            Random random = new Random();
+            var offset = random.Next(MaxCharacters);
+
+            // Get the MD5 Hash
+            var timeStamp = DateTime.Now.Ticks.ToString();
+            var hash = CreateHash(timeStamp);
+
+            string completeUrl = String.Format("{0}apikey={1}&ts={2}&hash={3}", url, PublicKey, timeStamp, hash);
+
+            // Call out to Marvel
+            HttpClient http = new HttpClient();
+            var response = await http.GetAsync(completeUrl);
+            return await response.Content.ReadAsStringAsync();
         }
 
         private static string CreateHash(string timeStamp)
