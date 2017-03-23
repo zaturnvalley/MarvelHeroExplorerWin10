@@ -51,6 +51,37 @@ namespace MarvelHeroExplorer
                 return;
             }    
         }
+        public static async Task PopulateMarvelComicsAsync(int characterId, ObservableCollection<ComicBook> marvelComics)
+        {
+            try
+            {
+                var comicDataWrapper = await GetComicDataWrapperAsync(characterId);
+
+                var comics = comicDataWrapper.data.results;
+                foreach (var comic in comics)
+                {
+                    // Filter characters that missing thumbnail images
+                    if (comic.thumbnail != null
+                        && comic.thumbnail.path != ""
+                        && comic.thumbnail.path != ImageNotAvailablePath)
+                    {
+                        comic.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                            comic.thumbnail.path,
+                            comic.thumbnail.extension);
+
+                        comic.thumbnail.large = string.Format("{0}/portrait_xlarge.{1}",
+                            comic.thumbnail.path,
+                            comic.thumbnail.extension);
+
+                        marvelComics.Add(comic);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
         private static async Task<CharacterDataWrapper> GetCharacterDataWrapperAsync()
         {
             // Assemble the URL
@@ -69,7 +100,7 @@ namespace MarvelHeroExplorer
             var result = (CharacterDataWrapper)serializer.ReadObject(ms);
             return result;
         }
-        private static async Task<CharacterDataWrapper> GetComicDataWrapperAsync(int characterId)
+        private static async Task<ComicDataWrapper> GetComicDataWrapperAsync(int characterId)
         {
             var url = String.Format("http://gateway.marvel.com:80/v1/public/comics?characters={0}&limit=10", 
                 characterId);
@@ -77,10 +108,10 @@ namespace MarvelHeroExplorer
             var jsonMessage = await CallMarvelAsync(url);
 
             // Response -> string / json -> deserialize
-            var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
+            var serializer = new DataContractJsonSerializer(typeof(ComicDataWrapper));
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
 
-            var result = (CharacterDataWrapper)serializer.ReadObject(ms);
+            var result = (ComicDataWrapper)serializer.ReadObject(ms);
             return result;
         }
         private async static Task<string> CallMarvelAsync(string url)
