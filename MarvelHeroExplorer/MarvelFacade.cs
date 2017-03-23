@@ -82,6 +82,12 @@ namespace MarvelHeroExplorer
                 return;
             }
         }
+
+        internal static Task PopulateMarvelcomicsAsync(int id, ObservableCollection<Comic> marvelComics)
+        {
+            throw new NotImplementedException();
+        }
+
         private static async Task<CharacterDataWrapper> GetCharacterDataWrapperAsync()
         {
             // Assemble the URL
