@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\zach\Documents\Visual Studio 2015\Projects\MarvelHeroExplorer\MarvelHeroExplorer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-04T20:31:54.368</Modified>
+      <Modified>2017-04-04T20:53:04.077</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\zach\Documents\Visual Studio 2015\Projects\MarvelHeroExplorer\MarvelHeroExplorer\bin\x86\Debug\MarvelHeroExplorer.exe">
       <PackagePath>entrypoint\MarvelHeroExplorer.exe</PackagePath>
-      <Modified>2017-04-04T20:31:53.661</Modified>
+      <Modified>2017-04-04T20:53:03.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zach\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -496,7 +496,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zach\Documents\Visual Studio 2015\Projects\MarvelHeroExplorer\MarvelHeroExplorer\bin\x86\Debug\MarvelHeroExplorer.xr.xml">
       <PackagePath>MarvelHeroExplorer.xr.xml</PackagePath>
-      <Modified>2017-04-04T20:31:53.472</Modified>
+      <Modified>2017-04-04T20:50:50.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -505,11 +505,11 @@
     <AppxPackagedFile Include="C:\Users\zach\Documents\Visual Studio 2015\Projects\MarvelHeroExplorer\MarvelHeroExplorer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-04T20:31:54.140</Modified>
+      <Modified>2017-04-04T20:50:51.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zach\Documents\Visual Studio 2015\Projects\MarvelHeroExplorer\MarvelHeroExplorer\bin\x86\Debug\Core\MarvelHeroExplorer.exe">
       <PackagePath>MarvelHeroExplorer.exe</PackagePath>
-      <Modified>2017-04-04T20:31:54.363</Modified>
+      <Modified>2017-04-04T20:53:04.074</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

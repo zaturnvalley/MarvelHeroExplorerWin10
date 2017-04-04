@@ -10,118 +10,120 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <ListView x:ConnectionId='2' Name="MasterListView" 
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListView x:ConnectionId='2' Name="MasterListView" 
                   IsItemClickEnabled="True"
                                                       
                                                          >
-            <ListView.ItemTemplate>
-                <DataTemplate                            >
-                    <StackPanel x:ConnectionId='13' Orientation="Horizontal" Margin="10,5,0,5">
-                        <Ellipse Width="45"
+                    <ListView.ItemTemplate>
+                        <DataTemplate                            >
+                            <StackPanel x:ConnectionId='13' Orientation="Horizontal" Margin="10,5,0,5">
+                                <Ellipse Width="45"
                                  Height="45">
-                            <Ellipse.Fill>
-                                <ImageBrush x:ConnectionId='15'                                       />
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <TextBlock x:ConnectionId='14'                     
+                                    <Ellipse.Fill>
+                                        <ImageBrush x:ConnectionId='15'                                       />
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <TextBlock x:ConnectionId='14'                     
                                    VerticalAlignment="Center"
                                    Margin="10,0,0,0"
                                    FontSize="18"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-        <!-- Detail Grid -->
-        <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0" Margin="10,0,10,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            
-            <!-- Detail about Characters-->
-            <Grid Grid.Row="0" 
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!-- Detail Grid -->
+                <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0" Margin="10,0,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Detail about Characters-->
+                    <Grid Grid.Row="0" 
                   HorizontalAlignment="Left" 
                   VerticalAlignment="Top">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <Image x:ConnectionId='10' Name="DetailImage" 
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:ConnectionId='10' Name="DetailImage" 
                        Grid.Column="0" 
                        Grid.RowSpan="2"
                        VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='11' Name="DetailNameTextBlock" 
+                        <TextBlock x:ConnectionId='11' Name="DetailNameTextBlock" 
                            FontSize="32" 
                            Grid.Column="1"
                            Margin="10,0,0,0"/>
-                <TextBlock x:ConnectionId='12' Name="DetailDescriptionTextBlock" 
+                        <TextBlock x:ConnectionId='12' Name="DetailDescriptionTextBlock" 
                            Grid.Row="1" 
                            Grid.Column="1" 
                            TextWrapping="Wrap"
                            Margin="10,0,0,0"/>
-            </Grid>
-            <!-- Comic List -->
-            <GridView x:ConnectionId='5' Name="ComicsGridView" Grid.Row="1"
+                    </Grid>
+                    <!-- Comic List -->
+                    <GridView x:ConnectionId='5' Name="ComicsGridView" Grid.Row="1"
                                                          
                       IsItemClickEnabled="True"
                                                           >
-                <GridView.ItemTemplate>
-                    <DataTemplate                            >
-                        <Image x:ConnectionId='9'                                   Width="100" Height="150"/>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-            
-            <!-- Comic Details -->
-            <Grid Grid.Row="2" 
+                        <GridView.ItemTemplate>
+                            <DataTemplate                            >
+                                <Image x:ConnectionId='9'                                   Width="100" Height="150"/>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+
+                    <!-- Comic Details -->
+                    <Grid Grid.Row="2" 
                   HorizontalAlignment="Left" 
                   VerticalAlignment="Top">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                <Image x:ConnectionId='6' Name="ComicDetailImage"
+                        <Image x:ConnectionId='6' Name="ComicDetailImage"
                        Grid.Column="0"
                        Grid.RowSpan="2"
                        VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='7' Name="ComicDetailNameTextBlock" 
+                        <TextBlock x:ConnectionId='7' Name="ComicDetailNameTextBlock" 
                            FontSize="32" 
                            Grid.Column="1"
                            Margin="10,0,0,0"/>
-                <TextBlock x:ConnectionId='8' Name="ComicDetailDescriptionTextBlock" 
+                        <TextBlock x:ConnectionId='8' Name="ComicDetailDescriptionTextBlock" 
                            Grid.Row="1" 
                            Grid.Column="1" 
                            TextWrapping="Wrap"
                            Margin="10,0,0,0"/>
-            </Grid>
-        </Grid>
-        <TextBlock Text="Data provided by Marvel. © 2017 MARVEL" 
+                    </Grid>
+                </Grid>
+                <TextBlock Text="Data provided by Marvel. © 2017 MARVEL" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
                    Grid.ColumnSpan="2" 
                    Grid.Row="2"/>
-        <ProgressRing x:ConnectionId='4' Name="MyProgressRing"
+                <ProgressRing x:ConnectionId='4' Name="MyProgressRing"
                       Width="100"
                       Height="100"
                       Foreground="Gray"
@@ -129,6 +131,8 @@
                       Grid.RowSpan="3"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
 

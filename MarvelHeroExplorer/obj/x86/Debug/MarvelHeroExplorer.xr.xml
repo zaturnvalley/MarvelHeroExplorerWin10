@@ -9,9 +9,9 @@
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Children" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="Children" />
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
@@ -24,6 +24,9 @@
       <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
