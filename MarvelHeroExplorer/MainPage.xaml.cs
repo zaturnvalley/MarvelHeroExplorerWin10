@@ -71,9 +71,19 @@ namespace MarvelHeroExplorer
 
             MarvelComics.Clear();
             
+            /*
+            while (MarvelComics.Count < 10)
+            {
+                Task t = MarvelFacade.PopulateMarvelComicsAsync(
+                        selectedCharacter.id,
+                        MarvelComics);
+                await t;
+            }
+            */
+
             await MarvelFacade.PopulateMarvelComicsAsync(
-                selectedCharacter.id, 
-                MarvelComics);
+                        selectedCharacter.id,
+                        MarvelComics);
 
             MyProgressRing.IsActive = false;
             MyProgressRing.Visibility = Visibility.Collapsed;
