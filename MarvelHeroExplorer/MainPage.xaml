@@ -12,22 +12,26 @@
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="Wide"
+                <VisualState x:Name="Wide">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="800" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="DetailGrid.(Grid.Row)" Value="0"/>
                         <Setter Target="DetailGrid.(Grid.Column)" Value="1"/>
+                        <Setter Target="ColumnOne.Width" Value="Auto" />
+                        <Setter Target="ColumnTwo.Width" Value="*" />
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:Name="Narrow"
+                <VisualState x:Name="Narrow">
                     <VisualState.StateTriggers>
                     <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="DetailGrid.(Grid.Row)" Value="1"/>
                         <Setter Target="DetailGrid.(Grid.Column)" Value="0"/>
+                        <Setter Target="ColumnOne.Width" Value="*" />
+                        <Setter Target="ColumnTwo.Width" Value="Auto" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -40,8 +44,8 @@
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition x:Name="ColumnOne" Width="Auto"/>
+                    <ColumnDefinition x:Name="ColumnTwo" Width="*"/>
                 </Grid.ColumnDefinitions>
                 <ListView Name="MasterListView" 
                   IsItemClickEnabled="True"
@@ -114,8 +118,8 @@
 
                     <!-- Comic Details -->
                     <Grid Grid.Row="2" 
-                  HorizontalAlignment="Left" 
-                  VerticalAlignment="Top">
+                         HorizontalAlignment="Left" 
+                         VerticalAlignment="Top">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
@@ -126,18 +130,19 @@
                         </Grid.ColumnDefinitions>
 
                         <Image Name="ComicDetailImage"
-                       Grid.Column="0"
-                       Grid.RowSpan="2"
-                       VerticalAlignment="Top"/>
+                            Grid.Column="0"
+                            Grid.RowSpan="2"
+                            VerticalAlignment="Top"/>
                         <TextBlock Name="ComicDetailNameTextBlock" 
                            FontSize="32" 
                            Grid.Column="1"
-                           Margin="10,0,0,0"/>
+                           TextWrapping="Wrap"          
+                           Margin="10,0,10,0"/>
                         <TextBlock Name="ComicDetailDescriptionTextBlock" 
                            Grid.Row="1" 
                            Grid.Column="1" 
                            TextWrapping="Wrap"
-                           Margin="10,0,0,0"/>
+                           Margin="10,0,10,0"/>
                     </Grid>
                 </Grid>
                 <TextBlock Text="Data provided by Marvel. © 2017 MARVEL" 
