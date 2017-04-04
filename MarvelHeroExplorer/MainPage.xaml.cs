@@ -75,7 +75,7 @@ namespace MarvelHeroExplorer
             MyProgressRing.Visibility = Visibility.Collapsed;
         }
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        private void ComicsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
 
         }
