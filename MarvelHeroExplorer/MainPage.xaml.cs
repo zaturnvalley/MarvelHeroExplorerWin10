@@ -77,7 +77,15 @@ namespace MarvelHeroExplorer
 
         private void ComicsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
+            var selectedComic = (ComicBook)e.ClickedItem;
 
+            ComicDetailNameTextBlock.Text = selectedComic.title;
+            ComicDetailDescriptionTextBlock.Text = selectedComic.description;
+
+            var largeImage = new BitmapImage();
+            Uri uri = new Uri(selectedComic.thumbnail.large, UriKind.Absolute);
+            largeImage.UriSource = uri;
+            ComicDetailImage.Source = largeImage;
         }
     }
 }
