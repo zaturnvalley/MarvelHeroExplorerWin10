@@ -74,6 +74,16 @@
                            TextWrapping="Wrap"
                            Margin="10,0,0,0"/>
             </Grid>
+            <GridView Grid.Row="1"
+                      ItemsSource="{x:Bind MarvelComics}"
+                      IsItemClickEnabled="True"
+                      ItemClick="GridView_ItemClick">
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="data:ComicBook">
+                        <Image Source="{x:Bind thumbnail.small}" Width="100" Height="150"/>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
         </Grid>
         <TextBlock Text="Data provided by Marvel. © 2017 MARVEL" 
                    VerticalAlignment="Center" 

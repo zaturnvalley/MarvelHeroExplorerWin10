@@ -27,12 +27,12 @@ namespace MarvelHeroExplorer
     public sealed partial class MainPage : Page
     {
         public ObservableCollection<Character> MarvelCharacters { get; set; }
-        public ObservableCollection<Comic> MarvelComics { get; set; }
+        public ObservableCollection<ComicBook> MarvelComics { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
             MarvelCharacters = new ObservableCollection<Character>();
-            MarvelComics = new ObservableCollection<Comic>();
+            MarvelComics = new ObservableCollection<ComicBook>();
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)

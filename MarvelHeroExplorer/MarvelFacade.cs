@@ -38,7 +38,7 @@ namespace MarvelHeroExplorer
                             character.thumbnail.path,
                             character.thumbnail.extension);
 
-                        character.thumbnail.large = string.Format("{0}/portrait_xlarge.{1}",
+                        character.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                             character.thumbnail.path,
                             character.thumbnail.extension);
 
@@ -65,11 +65,11 @@ namespace MarvelHeroExplorer
                         && comic.thumbnail.path != ""
                         && comic.thumbnail.path != ImageNotAvailablePath)
                     {
-                        comic.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                        comic.thumbnail.small = String.Format("{0}/portrait_medium.{1}",
                             comic.thumbnail.path,
                             comic.thumbnail.extension);
 
-                        comic.thumbnail.large = string.Format("{0}/portrait_xlarge.{1}",
+                        comic.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                             comic.thumbnail.path,
                             comic.thumbnail.extension);
 
@@ -83,7 +83,7 @@ namespace MarvelHeroExplorer
             }
         }
 
-        internal static Task PopulateMarvelcomicsAsync(int id, ObservableCollection<Comic> marvelComics)
+        internal static Task PopulateMarvelComicsAsync(int id, ObservableCollection<Comic> marvelComics)
         {
             throw new NotImplementedException();
         }
@@ -122,15 +122,12 @@ namespace MarvelHeroExplorer
         }
         private async static Task<string> CallMarvelAsync(string url)
         {
-            // Assemble the URL
-            Random random = new Random();
-            var offset = random.Next(MaxCharacters);
 
             // Get the MD5 Hash
             var timeStamp = DateTime.Now.Ticks.ToString();
             var hash = CreateHash(timeStamp);
 
-            string completeUrl = String.Format("{0}apikey={1}&ts={2}&hash={3}", url, PublicKey, timeStamp, hash);
+            string completeUrl = String.Format("{0}&apikey={1}&ts={2}&hash={3}", url, PublicKey, timeStamp, hash);
 
             // Call out to Marvel
             HttpClient http = new HttpClient();
