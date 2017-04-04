@@ -132,7 +132,7 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[34];
             _typeNameTable[0] = "MarvelHeroExplorer.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -149,11 +149,26 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
             _typeNameTable[13] = "MarvelHeroExplorer.Models.Events";
             _typeNameTable[14] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Url>";
             _typeNameTable[15] = "MarvelHeroExplorer.Models.Url";
-            _typeNameTable[16] = "System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.Comic>";
-            _typeNameTable[17] = "System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.Comic>";
-            _typeNameTable[18] = "MarvelHeroExplorer.Models.Comic";
+            _typeNameTable[16] = "System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.ComicBook>";
+            _typeNameTable[17] = "System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.ComicBook>";
+            _typeNameTable[18] = "MarvelHeroExplorer.Models.ComicBook";
+            _typeNameTable[19] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.TextObject>";
+            _typeNameTable[20] = "MarvelHeroExplorer.Models.TextObject";
+            _typeNameTable[21] = "MarvelHeroExplorer.Models.Series";
+            _typeNameTable[22] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Variant>";
+            _typeNameTable[23] = "MarvelHeroExplorer.Models.Variant";
+            _typeNameTable[24] = "System.Collections.Generic.List`1<Object>";
+            _typeNameTable[25] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Date>";
+            _typeNameTable[26] = "MarvelHeroExplorer.Models.Date";
+            _typeNameTable[27] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Price>";
+            _typeNameTable[28] = "MarvelHeroExplorer.Models.Price";
+            _typeNameTable[29] = "Double";
+            _typeNameTable[30] = "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Image>";
+            _typeNameTable[31] = "MarvelHeroExplorer.Models.Image";
+            _typeNameTable[32] = "MarvelHeroExplorer.Models.Creators";
+            _typeNameTable[33] = "MarvelHeroExplorer.Models.Characters";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[34];
             _typeTable[0] = typeof(global::MarvelHeroExplorer.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -170,9 +185,24 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
             _typeTable[13] = typeof(global::MarvelHeroExplorer.Models.Events);
             _typeTable[14] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Url>);
             _typeTable[15] = typeof(global::MarvelHeroExplorer.Models.Url);
-            _typeTable[16] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.Comic>);
-            _typeTable[17] = typeof(global::System.Collections.ObjectModel.Collection<global::MarvelHeroExplorer.Models.Comic>);
-            _typeTable[18] = typeof(global::MarvelHeroExplorer.Models.Comic);
+            _typeTable[16] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.ComicBook>);
+            _typeTable[17] = typeof(global::System.Collections.ObjectModel.Collection<global::MarvelHeroExplorer.Models.ComicBook>);
+            _typeTable[18] = typeof(global::MarvelHeroExplorer.Models.ComicBook);
+            _typeTable[19] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.TextObject>);
+            _typeTable[20] = typeof(global::MarvelHeroExplorer.Models.TextObject);
+            _typeTable[21] = typeof(global::MarvelHeroExplorer.Models.Series);
+            _typeTable[22] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Variant>);
+            _typeTable[23] = typeof(global::MarvelHeroExplorer.Models.Variant);
+            _typeTable[24] = typeof(global::System.Collections.Generic.List<global::System.Object>);
+            _typeTable[25] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Date>);
+            _typeTable[26] = typeof(global::MarvelHeroExplorer.Models.Date);
+            _typeTable[27] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Price>);
+            _typeTable[28] = typeof(global::MarvelHeroExplorer.Models.Price);
+            _typeTable[29] = typeof(global::System.Double);
+            _typeTable[30] = typeof(global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Image>);
+            _typeTable[31] = typeof(global::MarvelHeroExplorer.Models.Image);
+            _typeTable[32] = typeof(global::MarvelHeroExplorer.Models.Creators);
+            _typeTable[33] = typeof(global::MarvelHeroExplorer.Models.Characters);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -218,9 +248,23 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
         private object Activate_13_Events() { return new global::MarvelHeroExplorer.Models.Events(); }
         private object Activate_14_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Url>(); }
         private object Activate_15_Url() { return new global::MarvelHeroExplorer.Models.Url(); }
-        private object Activate_16_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.Comic>(); }
-        private object Activate_17_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MarvelHeroExplorer.Models.Comic>(); }
-        private object Activate_18_Comic() { return new global::MarvelHeroExplorer.Models.Comic(); }
+        private object Activate_16_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.ComicBook>(); }
+        private object Activate_17_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MarvelHeroExplorer.Models.ComicBook>(); }
+        private object Activate_18_ComicBook() { return new global::MarvelHeroExplorer.Models.ComicBook(); }
+        private object Activate_19_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.TextObject>(); }
+        private object Activate_20_TextObject() { return new global::MarvelHeroExplorer.Models.TextObject(); }
+        private object Activate_21_Series() { return new global::MarvelHeroExplorer.Models.Series(); }
+        private object Activate_22_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Variant>(); }
+        private object Activate_23_Variant() { return new global::MarvelHeroExplorer.Models.Variant(); }
+        private object Activate_24_List() { return new global::System.Collections.Generic.List<global::System.Object>(); }
+        private object Activate_25_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Date>(); }
+        private object Activate_26_Date() { return new global::MarvelHeroExplorer.Models.Date(); }
+        private object Activate_27_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Price>(); }
+        private object Activate_28_Price() { return new global::MarvelHeroExplorer.Models.Price(); }
+        private object Activate_30_List() { return new global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Image>(); }
+        private object Activate_31_Image() { return new global::MarvelHeroExplorer.Models.Image(); }
+        private object Activate_32_Creators() { return new global::MarvelHeroExplorer.Models.Creators(); }
+        private object Activate_33_Characters() { return new global::MarvelHeroExplorer.Models.Characters(); }
         private void VectorAdd_3_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Character>)instance;
@@ -241,14 +285,50 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
         }
         private void VectorAdd_16_ObservableCollection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Comic>)instance;
-            var newItem = (global::MarvelHeroExplorer.Models.Comic)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.ComicBook>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.ComicBook)item;
             collection.Add(newItem);
         }
         private void VectorAdd_17_Collection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Comic>)instance;
-            var newItem = (global::MarvelHeroExplorer.Models.Comic)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.ComicBook>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.ComicBook)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_19_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.TextObject>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.TextObject)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_22_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Variant>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Variant)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_24_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
+            var newItem = (global::System.Object)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_25_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Date>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Date)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_27_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Price>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Price)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_30_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::MarvelHeroExplorer.Models.Image>)instance;
+            var newItem = (global::MarvelHeroExplorer.Models.Image)item;
             collection.Add(newItem);
         }
 
@@ -374,25 +454,165 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.Comic>
-                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.Comic>"));
+            case 16:   //  System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.ComicBook>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.ComicBook>"));
                 userType.CollectionAdd = VectorAdd_16_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 17:   //  System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.Comic>
+            case 17:   //  System.Collections.ObjectModel.Collection`1<MarvelHeroExplorer.Models.ComicBook>
                 userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_17_Collection;
                 userType.CollectionAdd = VectorAdd_17_Collection;
                 xamlType = userType;
                 break;
 
-            case 18:   //  MarvelHeroExplorer.Models.Comic
+            case 18:   //  MarvelHeroExplorer.Models.ComicBook
                 userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_18_Comic;
+                userType.Activator = Activate_18_ComicBook;
+                userType.AddMemberName("id");
+                userType.AddMemberName("digitalId");
+                userType.AddMemberName("title");
+                userType.AddMemberName("issueNumber");
+                userType.AddMemberName("variantDescription");
+                userType.AddMemberName("description");
+                userType.AddMemberName("modified");
+                userType.AddMemberName("isbn");
+                userType.AddMemberName("upc");
+                userType.AddMemberName("diamondCode");
+                userType.AddMemberName("ean");
+                userType.AddMemberName("issn");
+                userType.AddMemberName("format");
+                userType.AddMemberName("pageCount");
+                userType.AddMemberName("textObjects");
+                userType.AddMemberName("resourceURI");
+                userType.AddMemberName("urls");
+                userType.AddMemberName("series");
+                userType.AddMemberName("variants");
+                userType.AddMemberName("collections");
+                userType.AddMemberName("collectedIssues");
+                userType.AddMemberName("dates");
+                userType.AddMemberName("prices");
+                userType.AddMemberName("thumbnail");
+                userType.AddMemberName("images");
+                userType.AddMemberName("creators");
+                userType.AddMemberName("characters");
+                userType.AddMemberName("stories");
+                userType.AddMemberName("events");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 19:   //  System.Collections.Generic.List`1<MarvelHeroExplorer.Models.TextObject>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_19_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 20:   //  MarvelHeroExplorer.Models.TextObject
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_20_TextObject;
+                userType.AddMemberName("type");
+                userType.AddMemberName("language");
+                userType.AddMemberName("text");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 21:   //  MarvelHeroExplorer.Models.Series
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 22:   //  System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Variant>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_22_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 23:   //  MarvelHeroExplorer.Models.Variant
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_23_Variant;
                 userType.AddMemberName("resourceURI");
                 userType.AddMemberName("name");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 24:   //  System.Collections.Generic.List`1<Object>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_24_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 25:   //  System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Date>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_25_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 26:   //  MarvelHeroExplorer.Models.Date
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_26_Date;
+                userType.AddMemberName("type");
+                userType.AddMemberName("date");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 27:   //  System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Price>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_27_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 28:   //  MarvelHeroExplorer.Models.Price
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_28_Price;
+                userType.AddMemberName("type");
+                userType.AddMemberName("price");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 29:   //  Double
+                xamlType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 30:   //  System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Image>
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_30_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 31:   //  MarvelHeroExplorer.Models.Image
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_31_Image;
+                userType.AddMemberName("path");
+                userType.AddMemberName("extension");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 32:   //  MarvelHeroExplorer.Models.Creators
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 33:   //  MarvelHeroExplorer.Models.Characters
+                userType = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -549,27 +769,407 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
         private void set_14_MainPage_MarvelComics(object instance, object Value)
         {
             var that = (global::MarvelHeroExplorer.MainPage)instance;
-            that.MarvelComics = (global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.Comic>)Value;
+            that.MarvelComics = (global::System.Collections.ObjectModel.ObservableCollection<global::MarvelHeroExplorer.Models.ComicBook>)Value;
         }
-        private object get_15_Comic_resourceURI(object instance)
+        private object get_15_ComicBook_id(object instance)
         {
-            var that = (global::MarvelHeroExplorer.Models.Comic)instance;
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.id;
+        }
+        private void set_15_ComicBook_id(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.id = (global::System.Int32)Value;
+        }
+        private object get_16_ComicBook_digitalId(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.digitalId;
+        }
+        private void set_16_ComicBook_digitalId(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.digitalId = (global::System.Int32)Value;
+        }
+        private object get_17_ComicBook_title(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.title;
+        }
+        private void set_17_ComicBook_title(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.title = (global::System.String)Value;
+        }
+        private object get_18_ComicBook_issueNumber(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.issueNumber;
+        }
+        private void set_18_ComicBook_issueNumber(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.issueNumber = (global::System.Int32)Value;
+        }
+        private object get_19_ComicBook_variantDescription(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.variantDescription;
+        }
+        private void set_19_ComicBook_variantDescription(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.variantDescription = (global::System.String)Value;
+        }
+        private object get_20_ComicBook_description(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.description;
+        }
+        private void set_20_ComicBook_description(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.description = (global::System.String)Value;
+        }
+        private object get_21_ComicBook_modified(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.modified;
+        }
+        private void set_21_ComicBook_modified(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.modified = (global::System.String)Value;
+        }
+        private object get_22_ComicBook_isbn(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.isbn;
+        }
+        private void set_22_ComicBook_isbn(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.isbn = (global::System.String)Value;
+        }
+        private object get_23_ComicBook_upc(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.upc;
+        }
+        private void set_23_ComicBook_upc(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.upc = (global::System.String)Value;
+        }
+        private object get_24_ComicBook_diamondCode(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.diamondCode;
+        }
+        private void set_24_ComicBook_diamondCode(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.diamondCode = (global::System.String)Value;
+        }
+        private object get_25_ComicBook_ean(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.ean;
+        }
+        private void set_25_ComicBook_ean(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.ean = (global::System.String)Value;
+        }
+        private object get_26_ComicBook_issn(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.issn;
+        }
+        private void set_26_ComicBook_issn(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.issn = (global::System.String)Value;
+        }
+        private object get_27_ComicBook_format(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.format;
+        }
+        private void set_27_ComicBook_format(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.format = (global::System.String)Value;
+        }
+        private object get_28_ComicBook_pageCount(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.pageCount;
+        }
+        private void set_28_ComicBook_pageCount(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.pageCount = (global::System.Int32)Value;
+        }
+        private object get_29_ComicBook_textObjects(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.textObjects;
+        }
+        private void set_29_ComicBook_textObjects(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.textObjects = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.TextObject>)Value;
+        }
+        private object get_30_TextObject_type(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.TextObject)instance;
+            return that.type;
+        }
+        private void set_30_TextObject_type(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.TextObject)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_31_TextObject_language(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.TextObject)instance;
+            return that.language;
+        }
+        private void set_31_TextObject_language(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.TextObject)instance;
+            that.language = (global::System.String)Value;
+        }
+        private object get_32_TextObject_text(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.TextObject)instance;
+            return that.text;
+        }
+        private void set_32_TextObject_text(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.TextObject)instance;
+            that.text = (global::System.String)Value;
+        }
+        private object get_33_ComicBook_resourceURI(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
             return that.resourceURI;
         }
-        private void set_15_Comic_resourceURI(object instance, object Value)
+        private void set_33_ComicBook_resourceURI(object instance, object Value)
         {
-            var that = (global::MarvelHeroExplorer.Models.Comic)instance;
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
             that.resourceURI = (global::System.String)Value;
         }
-        private object get_16_Comic_name(object instance)
+        private object get_34_ComicBook_urls(object instance)
         {
-            var that = (global::MarvelHeroExplorer.Models.Comic)instance;
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.urls;
+        }
+        private void set_34_ComicBook_urls(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.urls = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Url>)Value;
+        }
+        private object get_35_ComicBook_series(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.series;
+        }
+        private void set_35_ComicBook_series(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.series = (global::MarvelHeroExplorer.Models.Series)Value;
+        }
+        private object get_36_ComicBook_variants(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.variants;
+        }
+        private void set_36_ComicBook_variants(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.variants = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Variant>)Value;
+        }
+        private object get_37_Variant_resourceURI(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Variant)instance;
+            return that.resourceURI;
+        }
+        private void set_37_Variant_resourceURI(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Variant)instance;
+            that.resourceURI = (global::System.String)Value;
+        }
+        private object get_38_Variant_name(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Variant)instance;
             return that.name;
         }
-        private void set_16_Comic_name(object instance, object Value)
+        private void set_38_Variant_name(object instance, object Value)
         {
-            var that = (global::MarvelHeroExplorer.Models.Comic)instance;
+            var that = (global::MarvelHeroExplorer.Models.Variant)instance;
             that.name = (global::System.String)Value;
+        }
+        private object get_39_ComicBook_collections(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.collections;
+        }
+        private void set_39_ComicBook_collections(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.collections = (global::System.Collections.Generic.List<global::System.Object>)Value;
+        }
+        private object get_40_ComicBook_collectedIssues(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.collectedIssues;
+        }
+        private void set_40_ComicBook_collectedIssues(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.collectedIssues = (global::System.Collections.Generic.List<global::System.Object>)Value;
+        }
+        private object get_41_ComicBook_dates(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.dates;
+        }
+        private void set_41_ComicBook_dates(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.dates = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Date>)Value;
+        }
+        private object get_42_Date_type(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Date)instance;
+            return that.type;
+        }
+        private void set_42_Date_type(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Date)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_43_Date_date(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Date)instance;
+            return that.date;
+        }
+        private void set_43_Date_date(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Date)instance;
+            that.date = (global::System.String)Value;
+        }
+        private object get_44_ComicBook_prices(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.prices;
+        }
+        private void set_44_ComicBook_prices(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.prices = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Price>)Value;
+        }
+        private object get_45_Price_type(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Price)instance;
+            return that.type;
+        }
+        private void set_45_Price_type(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Price)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_46_Price_price(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Price)instance;
+            return that.price;
+        }
+        private void set_46_Price_price(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Price)instance;
+            that.price = (global::System.Double)Value;
+        }
+        private object get_47_ComicBook_thumbnail(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.thumbnail;
+        }
+        private void set_47_ComicBook_thumbnail(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.thumbnail = (global::MarvelHeroExplorer.Models.Thumbnail)Value;
+        }
+        private object get_48_ComicBook_images(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.images;
+        }
+        private void set_48_ComicBook_images(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.images = (global::System.Collections.Generic.List<global::MarvelHeroExplorer.Models.Image>)Value;
+        }
+        private object get_49_Image_path(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Image)instance;
+            return that.path;
+        }
+        private void set_49_Image_path(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Image)instance;
+            that.path = (global::System.String)Value;
+        }
+        private object get_50_Image_extension(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Image)instance;
+            return that.extension;
+        }
+        private void set_50_Image_extension(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.Image)instance;
+            that.extension = (global::System.String)Value;
+        }
+        private object get_51_ComicBook_creators(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.creators;
+        }
+        private void set_51_ComicBook_creators(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.creators = (global::MarvelHeroExplorer.Models.Creators)Value;
+        }
+        private object get_52_ComicBook_characters(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.characters;
+        }
+        private void set_52_ComicBook_characters(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.characters = (global::MarvelHeroExplorer.Models.Characters)Value;
+        }
+        private object get_53_ComicBook_stories(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.stories;
+        }
+        private void set_53_ComicBook_stories(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.stories = (global::MarvelHeroExplorer.Models.Stories)Value;
+        }
+        private object get_54_ComicBook_events(object instance)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            return that.events;
+        }
+        private void set_54_ComicBook_events(object instance, object Value)
+        {
+            var that = (global::MarvelHeroExplorer.Models.ComicBook)instance;
+            that.events = (global::MarvelHeroExplorer.Models.Events)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -665,21 +1265,249 @@ namespace MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo
                 break;
             case "MarvelHeroExplorer.MainPage.MarvelComics":
                 userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.MainPage");
-                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "MarvelComics", "System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.Comic>");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "MarvelComics", "System.Collections.ObjectModel.ObservableCollection`1<MarvelHeroExplorer.Models.ComicBook>");
                 xamlMember.Getter = get_14_MainPage_MarvelComics;
                 xamlMember.Setter = set_14_MainPage_MarvelComics;
                 break;
-            case "MarvelHeroExplorer.Models.Comic.resourceURI":
-                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Comic");
-                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "resourceURI", "String");
-                xamlMember.Getter = get_15_Comic_resourceURI;
-                xamlMember.Setter = set_15_Comic_resourceURI;
+            case "MarvelHeroExplorer.Models.ComicBook.id":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "id", "Int32");
+                xamlMember.Getter = get_15_ComicBook_id;
+                xamlMember.Setter = set_15_ComicBook_id;
                 break;
-            case "MarvelHeroExplorer.Models.Comic.name":
-                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Comic");
+            case "MarvelHeroExplorer.Models.ComicBook.digitalId":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "digitalId", "Int32");
+                xamlMember.Getter = get_16_ComicBook_digitalId;
+                xamlMember.Setter = set_16_ComicBook_digitalId;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.title":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "title", "String");
+                xamlMember.Getter = get_17_ComicBook_title;
+                xamlMember.Setter = set_17_ComicBook_title;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.issueNumber":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "issueNumber", "Int32");
+                xamlMember.Getter = get_18_ComicBook_issueNumber;
+                xamlMember.Setter = set_18_ComicBook_issueNumber;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.variantDescription":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "variantDescription", "String");
+                xamlMember.Getter = get_19_ComicBook_variantDescription;
+                xamlMember.Setter = set_19_ComicBook_variantDescription;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.description":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "description", "String");
+                xamlMember.Getter = get_20_ComicBook_description;
+                xamlMember.Setter = set_20_ComicBook_description;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.modified":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "modified", "String");
+                xamlMember.Getter = get_21_ComicBook_modified;
+                xamlMember.Setter = set_21_ComicBook_modified;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.isbn":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "isbn", "String");
+                xamlMember.Getter = get_22_ComicBook_isbn;
+                xamlMember.Setter = set_22_ComicBook_isbn;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.upc":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "upc", "String");
+                xamlMember.Getter = get_23_ComicBook_upc;
+                xamlMember.Setter = set_23_ComicBook_upc;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.diamondCode":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "diamondCode", "String");
+                xamlMember.Getter = get_24_ComicBook_diamondCode;
+                xamlMember.Setter = set_24_ComicBook_diamondCode;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.ean":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "ean", "String");
+                xamlMember.Getter = get_25_ComicBook_ean;
+                xamlMember.Setter = set_25_ComicBook_ean;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.issn":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "issn", "String");
+                xamlMember.Getter = get_26_ComicBook_issn;
+                xamlMember.Setter = set_26_ComicBook_issn;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.format":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "format", "String");
+                xamlMember.Getter = get_27_ComicBook_format;
+                xamlMember.Setter = set_27_ComicBook_format;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.pageCount":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "pageCount", "Int32");
+                xamlMember.Getter = get_28_ComicBook_pageCount;
+                xamlMember.Setter = set_28_ComicBook_pageCount;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.textObjects":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "textObjects", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.TextObject>");
+                xamlMember.Getter = get_29_ComicBook_textObjects;
+                xamlMember.Setter = set_29_ComicBook_textObjects;
+                break;
+            case "MarvelHeroExplorer.Models.TextObject.type":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.TextObject");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_30_TextObject_type;
+                xamlMember.Setter = set_30_TextObject_type;
+                break;
+            case "MarvelHeroExplorer.Models.TextObject.language":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.TextObject");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "language", "String");
+                xamlMember.Getter = get_31_TextObject_language;
+                xamlMember.Setter = set_31_TextObject_language;
+                break;
+            case "MarvelHeroExplorer.Models.TextObject.text":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.TextObject");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "text", "String");
+                xamlMember.Getter = get_32_TextObject_text;
+                xamlMember.Setter = set_32_TextObject_text;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.resourceURI":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "resourceURI", "String");
+                xamlMember.Getter = get_33_ComicBook_resourceURI;
+                xamlMember.Setter = set_33_ComicBook_resourceURI;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.urls":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "urls", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Url>");
+                xamlMember.Getter = get_34_ComicBook_urls;
+                xamlMember.Setter = set_34_ComicBook_urls;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.series":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "series", "MarvelHeroExplorer.Models.Series");
+                xamlMember.Getter = get_35_ComicBook_series;
+                xamlMember.Setter = set_35_ComicBook_series;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.variants":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "variants", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Variant>");
+                xamlMember.Getter = get_36_ComicBook_variants;
+                xamlMember.Setter = set_36_ComicBook_variants;
+                break;
+            case "MarvelHeroExplorer.Models.Variant.resourceURI":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Variant");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "resourceURI", "String");
+                xamlMember.Getter = get_37_Variant_resourceURI;
+                xamlMember.Setter = set_37_Variant_resourceURI;
+                break;
+            case "MarvelHeroExplorer.Models.Variant.name":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Variant");
                 xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "name", "String");
-                xamlMember.Getter = get_16_Comic_name;
-                xamlMember.Setter = set_16_Comic_name;
+                xamlMember.Getter = get_38_Variant_name;
+                xamlMember.Setter = set_38_Variant_name;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.collections":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "collections", "System.Collections.Generic.List`1<Object>");
+                xamlMember.Getter = get_39_ComicBook_collections;
+                xamlMember.Setter = set_39_ComicBook_collections;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.collectedIssues":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "collectedIssues", "System.Collections.Generic.List`1<Object>");
+                xamlMember.Getter = get_40_ComicBook_collectedIssues;
+                xamlMember.Setter = set_40_ComicBook_collectedIssues;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.dates":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "dates", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Date>");
+                xamlMember.Getter = get_41_ComicBook_dates;
+                xamlMember.Setter = set_41_ComicBook_dates;
+                break;
+            case "MarvelHeroExplorer.Models.Date.type":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Date");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_42_Date_type;
+                xamlMember.Setter = set_42_Date_type;
+                break;
+            case "MarvelHeroExplorer.Models.Date.date":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Date");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "date", "String");
+                xamlMember.Getter = get_43_Date_date;
+                xamlMember.Setter = set_43_Date_date;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.prices":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "prices", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Price>");
+                xamlMember.Getter = get_44_ComicBook_prices;
+                xamlMember.Setter = set_44_ComicBook_prices;
+                break;
+            case "MarvelHeroExplorer.Models.Price.type":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Price");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_45_Price_type;
+                xamlMember.Setter = set_45_Price_type;
+                break;
+            case "MarvelHeroExplorer.Models.Price.price":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Price");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "price", "Double");
+                xamlMember.Getter = get_46_Price_price;
+                xamlMember.Setter = set_46_Price_price;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.thumbnail":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "thumbnail", "MarvelHeroExplorer.Models.Thumbnail");
+                xamlMember.Getter = get_47_ComicBook_thumbnail;
+                xamlMember.Setter = set_47_ComicBook_thumbnail;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.images":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "images", "System.Collections.Generic.List`1<MarvelHeroExplorer.Models.Image>");
+                xamlMember.Getter = get_48_ComicBook_images;
+                xamlMember.Setter = set_48_ComicBook_images;
+                break;
+            case "MarvelHeroExplorer.Models.Image.path":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Image");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "path", "String");
+                xamlMember.Getter = get_49_Image_path;
+                xamlMember.Setter = set_49_Image_path;
+                break;
+            case "MarvelHeroExplorer.Models.Image.extension":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.Image");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "extension", "String");
+                xamlMember.Getter = get_50_Image_extension;
+                xamlMember.Setter = set_50_Image_extension;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.creators":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "creators", "MarvelHeroExplorer.Models.Creators");
+                xamlMember.Getter = get_51_ComicBook_creators;
+                xamlMember.Setter = set_51_ComicBook_creators;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.characters":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "characters", "MarvelHeroExplorer.Models.Characters");
+                xamlMember.Getter = get_52_ComicBook_characters;
+                xamlMember.Setter = set_52_ComicBook_characters;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.stories":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "stories", "MarvelHeroExplorer.Models.Stories");
+                xamlMember.Getter = get_53_ComicBook_stories;
+                xamlMember.Setter = set_53_ComicBook_stories;
+                break;
+            case "MarvelHeroExplorer.Models.ComicBook.events":
+                userType = (global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MarvelHeroExplorer.Models.ComicBook");
+                xamlMember = new global::MarvelHeroExplorer.MarvelHeroExplorer_XamlTypeInfo.XamlMember(this, "events", "MarvelHeroExplorer.Models.Events");
+                xamlMember.Getter = get_54_ComicBook_events;
+                xamlMember.Setter = set_54_ComicBook_events;
                 break;
             }
             return xamlMember;

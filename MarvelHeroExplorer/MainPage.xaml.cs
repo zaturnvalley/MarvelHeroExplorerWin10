@@ -67,12 +67,17 @@ namespace MarvelHeroExplorer
 
             MarvelComics.Clear();
             
-            await MarvelFacade.PopulateMarvelcomicsAsync(
+            await MarvelFacade.PopulateMarvelComicsAsync(
                 selectedCharacter.id, 
                 MarvelComics);
 
             MyProgressRing.IsActive = false;
             MyProgressRing.Visibility = Visibility.Collapsed;
+        }
+
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }
